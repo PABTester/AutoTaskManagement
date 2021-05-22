@@ -73,16 +73,16 @@ pip -r install ./requirements.txt
 
 2、mysql数据库及新建用户：
 create database jcrontab;
-CREATE USER jeson@'%' IDENTIFIED BY 'jesonc.com';
-grant all privileges on jcrontab.* to 'jeson'@'%' with grant option;
+CREATE USER nicky@'%' IDENTIFIED BY 'nicky';
+grant all privileges on jcrontab.* to 'nicky'@'%' with grant option;
 
 3、修改djang配置settings.py中数据库配置信息 DATABASES = {
 'default': {
 'ENGINE': 'django.db.backends.mysql', # 数据库引擎
 'NAME': 'jcrontab', # 数据库名，先前创建的
-'USER': 'jeson', # 用户名，可以自己创建用户
-'PASSWORD': 'jesonc.com', # 密码
-'HOST': 'www.iaskjob.com', # mysql服务所在的主机ip
+'USER': 'nicky', # 用户名，可以自己创建用户
+'PASSWORD': 'nicky', # 密码
+'HOST': '', # mysql服务所在的主机ip
 'PORT': '3306', # mysql服务端口
 }
 }
@@ -93,7 +93,7 @@ python3.6 manage.py migrate 3）打开（1）之前的注释
 创建xadmin后台用户密码
 python3.6 manage.py createsuperuser
 
-Username (leave blank to use 'jeson'): jeson Email address: jeson@imoocc.com Password: jesonc.com Password (again): jesonc.com Superuser created successfully.
+Username (leave blank to use 'nicky'): jeson Email address: 511727097@qq.com Password: nicky Password (again): nicky Superuser created successfully.
 
 启动工程
 python3.6 manage.py runserver
