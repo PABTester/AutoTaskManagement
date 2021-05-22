@@ -97,3 +97,23 @@ Username (leave blank to use 'nicky'): jeson Email address: 511727097@qq.com Pas
 
 启动工程
 python3.6 manage.py runserver
+
+目录结构从上往下是这样子的：
+
+首先是 extra App，这里存放第三方的模块，工程后台使用 Xadmin，所以需要把 Xadmin 模块也集成到工程中。
+
+Jcron 目录里面是 Django 的一些相关配置文件，如：settings 配置文件等，都是遵循Django 框架模式存放的。
+
+Jcrontab 里面是放的是 Django 的相关应用，这个也遵循 Django 框架的目录结构。
+
+logs 是存放日志的目录，这里新建一个专用于存放日志文件目录，会把相关的日志输出到目录下。
+
+static，static 目录下存放相关的静态文件，前台页面的图片 CSS、JS 等都会存放在 static 下。
+
+templates 里存放 Django 的模板文件，主要是一些 HTML 的页面模板。
+
+manage.py 是 Django 框架的管理文件，我们在安装的过程中，需要用到 manage.py 去建立
+
+super 用户，并且做模型的初始化，启动也是通过它来执行 manage.py runserver 启动工程的。
+
+requirements.txt 是一个模块列表，我会把整个工程所依赖的相关模块，以列表的方式存放在requirements.txt 中。你安装的时候需要从 requirements.txt 中提取相关的模块。所以它是一个 Jcrontab 工程所需要用到的安装模块的一个介绍说明。
